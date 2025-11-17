@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bsort"
+version = "0.1.0"
+description = "Real-time bottle cap detection pipeline for Edge Devices"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "ultralytics>=8.0.0",
+    "opencv-python-headless",
+    "typer[all]",
+    "pyyaml",
+    "wandb",
+    "numpy"
+]
+
+[project.scripts]
+bsort = "bsort.main:app"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.pylint.messages_control]
+disable = ["C0114", "C0115", "C0116", "E1101"]

@@ -1,0 +1,16 @@
+project_name: "bsort-caps"
+dataset_path: "./datasets/caps_data.yaml" # YOLO data config
+model:
+  base: "yolov8n.pt"
+  input_size: 640
+  device: "cpu" # or "cuda" if training on GPU
+
+training:
+  epochs: 50
+  batch_size: 16
+  learning_rate: 0.01
+  output_dir: "./runs"
+
+inference:
+  confidence_threshold: 0.5
+  export_format: "onnx" # critical for RPi speed
