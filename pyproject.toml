@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "bsort"
 version = "0.1.0"
 description = "Real-time bottle cap detection pipeline for Edge Devices"
-authors = [{name = "Your Name", email = "your.email@example.com"}]
+authors = [{name = "John Junieargo Timotius", email = "jones.timotius@gmail.com"}]
 requires-python = ">=3.10"
 dependencies = [
     "ultralytics>=8.0.0",
