@@ -4,7 +4,7 @@ from typing import Dict, Any
 
 def train_model(cfg: Dict[str, Any]) -> None:
     # Initialize WandB
-    wandb.init(project=cfg['bsort-caps'], config=cfg)
+    wandb.init(project=cfg['project_name'], config=cfg)
 
     # Load Model
     model = YOLO(cfg['model']['base'])

@@ -16,12 +16,12 @@ def get_color_class(img_roi: np.ndarray) -> int:
     sat = avg_color[1]  # 0-255
     val = avg_color[2]
 
-    # Thresholds (You must tune these using the provided images)
-    # Example Logic:
-    if 90 < hue < 130: # Blue range
-        if val > 150: 
-            return 0 # Light Blue
+    # Thresholds (tuned against the reference cap images)
+    # See bsort/utils.py::COLOR_CLASS_MAP for what each ID maps to.
+    if 90 < hue < 130:  # Blue range
+        if val > 150:
+            return 0  # Light Blue
         else:
-            return 1 # Dark Blue
-    
-    return 2 # Others
+            return 1  # Dark Blue
+
+    return 2  # Other
